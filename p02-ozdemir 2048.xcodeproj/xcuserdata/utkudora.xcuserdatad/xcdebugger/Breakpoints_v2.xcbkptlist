@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "p02-ozdemir 2048/ViewController.swift"
+            timestampString = "476136672.853242"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "p02_ozdemir_2048.ViewController.label00.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
+                  moduleName = "p02-ozdemir 2048"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/utkudora/Desktop/Dersler/4th%20year/Game%20Development%20for%20Mobile%20Platform/Git/p02-ozdemir%202048/p02-ozdemir%202048/ViewController.swift"
+                  timestampString = "476137377.704437"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "p02_ozdemir_2048.ViewController.label00.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
+                  moduleName = "p02-ozdemir 2048"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/utkudora/Desktop/Dersler/4th%20year/Game%20Development%20for%20Mobile%20Platform/Git/p02-ozdemir%202048/p02-ozdemir%202048/ViewController.swift"
+                  timestampString = "476137377.708401"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "p02_ozdemir_2048.ViewController.label00.materializeForSet : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
+                  moduleName = "p02-ozdemir 2048"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/utkudora/Desktop/Dersler/4th%20year/Game%20Development%20for%20Mobile%20Platform/Git/p02-ozdemir%202048/p02-ozdemir%202048/ViewController.swift"
+                  timestampString = "476137377.708651"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "p02_ozdemir_2048.ViewController.init (p02_ozdemir_2048.ViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; p02_ozdemir_2048.ViewController"
+                  moduleName = "p02-ozdemir 2048"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/utkudora/Desktop/Dersler/4th%20year/Game%20Development%20for%20Mobile%20Platform/Git/p02-ozdemir%202048/p02-ozdemir%202048/ViewController.swift"
+                  timestampString = "476137377.708911"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "419">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "p02_ozdemir_2048.ViewController.init (p02_ozdemir_2048.ViewController.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;p02_ozdemir_2048.ViewController&gt;"
+                  moduleName = "p02-ozdemir 2048"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/utkudora/Desktop/Dersler/4th%20year/Game%20Development%20for%20Mobile%20Platform/Git/p02-ozdemir%202048/p02-ozdemir%202048/ViewController.swift"
+                  timestampString = "476137377.709171"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "334">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "p02-ozdemir 2048/ViewController.swift"
+            timestampString = "476140292.149774"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "SwipeLeftAction(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "p02-ozdemir 2048/ViewController.swift"
+            timestampString = "476145595.851078"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "226"
+            endingLineNumber = "226"
+            landmarkName = "SwipeRightAction(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "p02-ozdemir 2048/ViewController.swift"
+            timestampString = "476145595.851078"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "228"
+            endingLineNumber = "228"
+            landmarkName = "SwipeRightAction(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "p02-ozdemir 2048/ViewController.swift"
+            timestampString = "476145595.851078"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "233"
+            endingLineNumber = "233"
+            landmarkName = "SwipeRightAction(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
