@@ -29,15 +29,26 @@ class ViewController: UIViewController {
     @IBOutlet weak var label31: UILabel!
     @IBOutlet weak var label32: UILabel!
     @IBOutlet weak var label33: UILabel!
-    
-    
+    var leftStuck = false
+    var upStuck = false
+    var downStuck = false
+    var rightStuck = false
+    @IBOutlet weak var popUpOutlet: UIView!
+    @IBOutlet weak var endGameLabel: UILabel!
+    @IBOutlet weak var startOverButton: UIButton!
+    @IBOutlet weak var highScoreLabel: UILabel!
+  
     @IBAction func SwipeLeftAction(sender: AnyObject) {
+        leftStuck = true
         for _ in 0...3{ // to slide the numbers to corners and have them move through 0's
             for xIndex in 0...3{
                 for yIndex in 0...2 {
                 
                     if (array[xIndex][yIndex] == 0)&&(array[xIndex][yIndex+1] != 0)
-                    {
+                    {   rightStuck = false
+                        leftStuck = false
+                        upStuck = false
+                        downStuck = false
                         array[xIndex][yIndex] = array[xIndex][yIndex+1]
                         array[xIndex][yIndex+1] = 0
                     }
@@ -52,7 +63,10 @@ class ViewController: UIViewController {
             for yIndex in 0...2 {
                 
                 if (array[xIndex][yIndex] == array[xIndex][yIndex+1])
-                {
+                {rightStuck = false
+                    leftStuck = false
+                    upStuck = false
+                    downStuck = false
                     array[xIndex][yIndex] = array[xIndex][yIndex+1]*2
                     if yIndex == 2 {
                         array[xIndex][yIndex+1] = 0
@@ -76,7 +90,7 @@ class ViewController: UIViewController {
 
     
     @IBAction func SwipeUpAction(sender: AnyObject) {
-        
+        upStuck = true
         
         
         
@@ -85,7 +99,10 @@ class ViewController: UIViewController {
                 for xIndex in 0...2 {
                     
                     if (array[xIndex][yIndex] == 0)&&(array[xIndex+1][yIndex] != 0)
-                    {
+                    {rightStuck = false
+                        leftStuck = false
+                        upStuck = false
+                        downStuck = false
                         array[xIndex][yIndex] = array[xIndex+1][yIndex]
                         array[xIndex+1][yIndex] = 0
                     }
@@ -100,7 +117,10 @@ class ViewController: UIViewController {
             for xIndex in 0...2 {
                 
                 if (array[xIndex][yIndex] == array[xIndex+1][yIndex])
-                {
+                {rightStuck = false
+                    leftStuck = false
+                    upStuck = false
+                    downStuck = false
                     array[xIndex][yIndex] = array[xIndex+1][yIndex]*2
                     if xIndex == 2 {
                         array[xIndex+1][yIndex] = 0
@@ -119,35 +139,25 @@ class ViewController: UIViewController {
             
         }
         
-        
-        
         generateRandomNumbers()
         
         updateLabels()
-
-        
-        
-        
-        
+ 
     }
-    
-    
-    
-    
     
     @IBAction func SwipeDownAction(sender: AnyObject) {
         
-        
-        
-        
-        
+        downStuck = true
         
         for _ in 0...3{ // to slide the numbers to corners and have them move through 0's
             for yIndex in 0...3  {
                 for xIndex in 0...2 {
                     
                     if (array[xIndex+1][yIndex] == 0)&&(array[xIndex][yIndex] != 0)
-                    {
+                    {rightStuck = false
+                        leftStuck = false
+                        upStuck = false
+                        downStuck = false
                         array[xIndex+1][yIndex] = array[xIndex][yIndex]
                         array[xIndex][yIndex] = 0
                     }
@@ -161,7 +171,10 @@ class ViewController: UIViewController {
             for xIndex in (1...3).reverse() {
                 
                 if (array[xIndex][yIndex] == array[xIndex-1][yIndex])
-                {
+                { rightStuck = false
+                    leftStuck = false
+                    upStuck = false
+                    downStuck = false
                     array[xIndex][yIndex] = array[xIndex][yIndex]*2
                     if xIndex == 1 {
                         
@@ -196,14 +209,17 @@ class ViewController: UIViewController {
     
     @IBAction func SwipeRightAction(sender: AnyObject) {
         
-        
+        rightStuck = true
         
         for _ in 0...3{ // to slide the numbers to corners and have them move through 0's
             for xIndex in 0...3{
                 for yIndex in 0...2 {
                     
                     if (array[xIndex][yIndex+1] == 0)&&(array[xIndex][yIndex] != 0)
-                    {
+                    {rightStuck = false
+                        leftStuck = false
+                        upStuck = false
+                        downStuck = false
                         array[xIndex][yIndex+1] = array[xIndex][yIndex]
                         array[xIndex][yIndex] = 0
                     }
@@ -218,7 +234,10 @@ class ViewController: UIViewController {
             for yIndex in (1...3).reverse() {
                 
                 if (array[xIndex][yIndex] == array[xIndex][yIndex-1])
-                {
+                { rightStuck = false
+                    leftStuck = false
+                    upStuck = false
+                    downStuck = false
                     array[xIndex][yIndex] = array[xIndex][yIndex]*2
                     if yIndex == 1 {
                        
@@ -245,6 +264,27 @@ class ViewController: UIViewController {
     }
     
     
+    @IBAction func startOver(sender: AnyObject) {
+        startOverButton.alpha = 0
+        endGameLabel.alpha = 0
+        popUpOutlet.alpha  = 0
+       
+        for xIndex in 0...3{
+            for yIndex in 0...3  {
+                
+                        
+                array[xIndex][yIndex] = 0
+                        
+                
+                
+            }
+        }
+        
+        generateRandomNumbers()
+        updateLabels()
+        
+        
+    }
     func generateRandomNumbers()
     {
         for xIndex in 0...3{
@@ -289,21 +329,14 @@ class ViewController: UIViewController {
             return UIColor.redColor()
         }
         
-    
-    
-    
-    
-    
-    
-    
-    
-    
     }
 
     func updateLabels(){
-     
+    
         
         let maxElement = array.map({ $0.maxElement()!}).maxElement()!
+        
+      
         scoreLabel.text = "\(maxElement)"
         scoreLabel.backgroundColor = setBackgroundColor(maxElement)
         var count = 0
@@ -314,47 +347,14 @@ class ViewController: UIViewController {
                 count++
             }
         }
-
         
-        
-        
-        
-//        label00.text = "\(array[0][0])"
-//        label01.text = "\(array[0][1])"
-//        label02.text = "\(array[0][2])"
-//        label03.text = "\(array[0][3])"
-//        label10.text = "\(array[1][0])"
-//        label11.text = "\(array[1][1])"
-//        label12.text = "\(array[1][2])"
-//        label13.text = "\(array[1][3])"
-//        label20.text = "\(array[2][0])"
-//        label21.text = "\(array[2][1])"
-//        label22.text = "\(array[2][2])"
-//        label23.text = "\(array[2][3])"
-//        label30.text = "\(array[3][0])"
-//        label31.text = "\(array[3][1])"
-//        label32.text = "\(array[3][2])"
-//        label33.text = "\(array[3][3])"
-//        
-//        label00.backgroundColor = setBackgroundColor(array[0][0])
-//        label01.backgroundColor = setBackgroundColor(array[0][1])
-//        label02.backgroundColor = setBackgroundColor(array[0][2])
-//        label03.backgroundColor = setBackgroundColor(array[0][3])
-//        label10.backgroundColor = setBackgroundColor(array[1][0])
-//        label11.backgroundColor = setBackgroundColor(array[1][1])
-//        label12.backgroundColor = setBackgroundColor(array[1][2])
-//        label13.backgroundColor = setBackgroundColor(array[1][3])
-//        label20.backgroundColor = setBackgroundColor(array[2][0])
-//        label21.backgroundColor = setBackgroundColor(array[2][1])
-//        label22.backgroundColor = setBackgroundColor(array[2][2])
-//        label23.backgroundColor = setBackgroundColor(array[2][3])
-//        label30.backgroundColor = setBackgroundColor(array[3][0])
-//        label31.backgroundColor = setBackgroundColor(array[3][1])
-//        label32.backgroundColor = setBackgroundColor(array[3][2])
-//        label33.backgroundColor = setBackgroundColor(array[3][3])
-        
-
-    
+        if (rightStuck&&leftStuck&&upStuck&&downStuck){ // checks if there are possible moves if not creates a popup and asks user to start over.
+            startOverButton.alpha = 1
+            endGameLabel.alpha = 1
+            popUpOutlet.alpha  = 1
+            
+            
+        }
     
     }
     override func viewDidLoad() {
@@ -364,15 +364,7 @@ class ViewController: UIViewController {
         updateLabels()
         
         
-//        for xIndex in 0...3{
-//            for yIndex in 0...3 {
-//            
-//            array[xIndex][yIndex] = 0
-//                
-//            }
-//        
-//        }
-        // Do any additional setup after loading the view, typically from a nib.
+// Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
