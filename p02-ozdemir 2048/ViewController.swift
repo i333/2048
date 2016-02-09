@@ -37,7 +37,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var endGameLabel: UILabel!
     @IBOutlet weak var startOverButton: UIButton!
     @IBOutlet weak var highScoreLabel: UILabel!
-  
+    
     @IBAction func SwipeLeftAction(sender: AnyObject) {
         leftStuck = true
         for _ in 0...3{ // to slide the numbers to corners and have them move through 0's
@@ -336,7 +336,17 @@ class ViewController: UIViewController {
         
         let maxElement = array.map({ $0.maxElement()!}).maxElement()!
         
-      
+        let defaults=NSUserDefaults()
+        let highscore=defaults.integerForKey("highscore")
+        
+        if(maxElement>highscore)
+        {
+            defaults.setInteger(maxElement, forKey: "highscore")
+        }
+        let highScoreShow=defaults.integerForKey("highscore")
+    
+        highScoreLabel.text = "\(highScoreShow)"
+        highScoreLabel.backgroundColor = setBackgroundColor(highScoreShow)
         scoreLabel.text = "\(maxElement)"
         scoreLabel.backgroundColor = setBackgroundColor(maxElement)
         var count = 0
